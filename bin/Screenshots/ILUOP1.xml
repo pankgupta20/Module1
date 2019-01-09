@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Jv-Ins-Reinsurance Version="2015-04" xmlns="http://www.ACORD.org/standards/Jv-Ins-Reinsurance/1" xmlns:ac="http://www.ACORD.org/Standards/AcordMsgSvc/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.ACORD.org/standards/Jv-Ins-Reinsurance/1 Jv-Ins-Reinsurance-2015-04.xsd">
+
+	<TechAccount Sender="broker" Receiver="Reinsurer">
+		<UUId>20151001-1111-aa07-a765-33a0c91e6bf9</UUId>
+		<BrokerReference>rkrTr3Ref1</BrokerReference>
+		<CreationDate>2015-10-08T12:53:12Z</CreationDate>
+		<AccountTransactionType>premium</AccountTransactionType>
+		<Explanation>Sample message details</Explanation>
+         
+		<Cedent>
+			<Party>
+				<Name>Test Name</Name>
+			</Party>
+			<Contact>
+				<PersonName>A.N.E. Body</PersonName>
+				<Telephone>01386 520331</Telephone>
+			</Contact>
+		</Cedent>
+		<Reinsurer>
+			<Party>
+			<Id Agency="institute_of_london_underwriters">302401</Id> 
+			</Party>
+		</Reinsurer>
+		<Broker>
+			<Party>
+				<Id Agency="lloyds">0941</Id>
+				<Name>RI Broking Ltd.</Name>
+			</Party>
+			<Contact>
+				<PersonName>Raman kalra</PersonName>
+				<Fax>123 4567890</Fax>
+				<Email>raman.kalra@xchanging.com</Email>
+			</Contact>
+			<Address>
+				<NumberAndStreet>1 Lime Street</NumberAndStreet>
+				<CityName>London</CityName>
+				<PostalCode>EC3V 7ST</PostalCode>
+				<Country>GB</Country>
+			</Address>
+		</Broker>
+		<OriginalPolicyholder>
+			<Party>
+				<Name>Test policy holder name</Name>
+			</Party>
+		</OriginalPolicyholder>
+		<AccountingYear>2015</AccountingYear>
+		<AccountPeriod>
+			<StartDate>2015-01-01</StartDate>
+			<EndDate>2015-12-31</EndDate>
+		</AccountPeriod>
+		<ReferenceCurrency>
+		<Ccy>USD</Ccy>
+		</ReferenceCurrency>
+		
+		<AmtShareIndicator>receiver_share</AmtShareIndicator>
+		
+		  <Contract>
+			<ContractName>Property Department First Excess of Loss Layer</ContractName>
+			<TreatyFac>treaty</TreatyFac>
+			<ContractNature>nonproportional</ContractNature>
+			<CedentReference>CedentContractReference</CedentReference>  <!-- optional tag  -->
+			<BrokerReference>B0941E2ETERR0OP40</BrokerReference>
+			<BrokerGroupReference>BrokerContractGroupReference</BrokerGroupReference>  <!-- optional tag  -->
+			<ReinsurerReference>ReinsurerContractReference</ReinsurerReference>
+		</Contract>
+		<Subaccount>
+			<SequenceNbr>1</SequenceNbr>
+			<ContractSection>
+				<HighLevelReference>001</HighLevelReference>
+				<Description>AAA</Description>  <!-- optional tag  -->
+				<CoverType>excess_of_loss</CoverType>
+				<ContractPeriod>
+					<StartDateTime>2015-01-01</StartDateTime>
+					<EndDateTime>2015-12-31</EndDateTime>
+				</ContractPeriod>
+				<ContractPeriodDescription>Contract period description</ContractPeriodDescription> <!-- optional tag  -->
+				<UnderwritingYear>2015</UnderwritingYear>
+				<ReinsurerSharePercentage>
+					<Rate RateUnit="percentage">10.0</Rate>
+				</ReinsurerSharePercentage>
+				<BrokerSharePercentage>
+					<Rate RateUnit="percentage">90.0</Rate>
+				</BrokerSharePercentage>
+				<!-- optional tag  -->
+				<OverridingCommission>  
+				<!-- optional tag  -->
+					<OverridingCommissionPercentage>  
+						<!-- optional tag  -->
+						<Rate RateUnit="percentage">4.25</Rate> 
+					</OverridingCommissionPercentage> 
+				</OverridingCommission>
+				
+				
+				
+				<Brokerage>
+					<BrokeragePercentage>
+						<Rate RateUnit="percentage">2.5</Rate>
+					</BrokeragePercentage>
+					<!-- optional tag  -->
+					<BrokerageBasis>gross_premium</BrokerageBasis>
+				</Brokerage>
+				
+				
+				
+			<TaxApplications Type="tax_added_to_gross_premium">
+					<!-- Non - UKIPT-->
+					<TaxApplication>
+						<TaxProvision>
+							<TaxClass>premium_tax</TaxClass>
+							<TaxType>insurance_premium_tax</TaxType>
+							<TaxAuthorityLocation>
+								<Location>
+									<Country>GB</Country>
+									<Subentity>GB-ABE</Subentity>
+								</Location>
+							</TaxAuthorityLocation>
+							<TaxTypeDescription>Non UK IPT</TaxTypeDescription>
+							<TaxRateBasis>gross_premium</TaxRateBasis>
+						</TaxProvision>
+						<TaxCalculation>
+							<TaxBaseAmount>
+								<Amt Ccy="USD" Share="receiver_share" CcyIndic="reference_currency">40000.00</Amt>
+							</TaxBaseAmount>
+							<TaxPercentage>
+								<Rate RateUnit="percentage">5.0000000</Rate>
+							</TaxPercentage>
+							<RiskTaxBoundLocation>
+								<Location>
+									<Country>GB</Country>
+									<Subentity>GB-ABE</Subentity>
+								</Location>
+							</RiskTaxBoundLocation>
+						</TaxCalculation>
+						<TaxAmount>
+							<Amt Ccy="USD" Share="receiver_share" CcyIndic="reference_currency">2000.00</Amt>
+						</TaxAmount>
+					</TaxApplication>  
+					
+					
+				</TaxApplications>
+				
+				
+				
+				
+				
+				
+				
+			</ContractSection>
+			<JvClassOfBusiness>livestock</JvClassOfBusiness>
+			<RiskLocation>
+				<Location>
+					<Country>JP</Country>
+					<Subentity>JP-13</Subentity>
+				</Location>
+				<LocationPercentage>
+					<Rate RateUnit="percentage">100</Rate>
+				</LocationPercentage>
+			</RiskLocation>
+
+			<TechAccountEntry>
+				<BrokerReference>BkrTAEntry24</BrokerReference> <!-- optional -->
+			</TechAccountEntry>
+			
+			
+			<!-- Mandatory if DRi is used -->
+			<ac:SupportingDocument>
+    <ac:DocumentId>d4008ae5-708f-4688-902b-c603044778df</ac:DocumentId>
+    <ac:DocumentVersionDtTime>2015-08-24T12:00:00Z</ac:DocumentVersionDtTime>
+    <ac:DocumentTypeCd>document_slip</ac:DocumentTypeCd>
+    <ac:CommunicationChannelCd>repository_upload</ac:CommunicationChannelCd>
+   </ac:SupportingDocument>
+			
+			<TechAccountAmtItem Type="premium">
+				<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">40000.00</Amt>
+			</TechAccountAmtItem>
+			
+			<TechAccountAmtItem Type="other_deductions">
+				<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">1000.00</Amt>
+			</TechAccountAmtItem>
+			
+			<TechAccountAmtItem Type="brokerage">
+				<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">1000.00</Amt>
+			</TechAccountAmtItem>
+			
+			<TaxAmtItem Type="tax_added_to_gross_premium">
+				<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">2000.00</Amt>
+			</TaxAmtItem>
+			
+			<BalanceAmtItem Type="technical_account_subaccount_balance_due_by_sender">
+				<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">40000.00</Amt>
+			</BalanceAmtItem>
+		</Subaccount>
+		<PaymentMeans>as_per_financial_account</PaymentMeans>
+		<BalanceAmtItem Type="technical_account_settlement_balance_due_by_sender" AmtStatus="satisfies_premium_payment_warranty">
+			<Amt Share="receiver_share" CcyIndic="reference_currency" Ccy="USD">40000.00</Amt>
+			<DueDate>2016-01-01</DueDate>
+		</BalanceAmtItem>
+	</TechAccount>
+</Jv-Ins-Reinsurance>
